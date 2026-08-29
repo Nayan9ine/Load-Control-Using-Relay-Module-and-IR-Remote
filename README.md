@@ -1,6 +1,7 @@
 # Load-Control-Using-Relay-Module-and-IR-Remote
 Created a load control system in which load connected to relay module is turned ON or OFF on entering a password with IR based remote.Built on arduin UNO R3 clone using CH340 chip.
 <br><br>
+
 <img width="1116" height="628" alt="image" src="https://github.com/user-attachments/assets/c37c8031-149f-4ed6-9f4a-a2ae66c77b9f" />
 <br><br>
 Used IRremote library by Shirriff,z3t0,ArminJo (https://github.com/Arduino-IRremote/Arduino-IRremote).The library can detect numerous protocols used for communication by IR.Standard rgb light control Remote was used that uses NEC protocol.IR receiver was salvaged off from old dish tv setup box . Has 3 pins with signal,gnd,power starting from left to right respectively. The library helped identify signal protocol and command code for each button pressed. 
