@@ -43,29 +43,28 @@ Using Library: Used IRremote library by Shirriff, z3t0, ArminJo (https://github.
 </p>   
 
 <img width="1151" height="647" alt="image" src="https://github.com/user-attachments/assets/d9dc2a57-dcf4-4e3b-8da1-3b2cbe381aaf" />
-<div align="center"><sub><i> Fig8: LD1117AG ADA TBTQ</i></sub></div>
-
+<div align="center"><sub><i> Fig8:NEC Protocol Used by Remote</i></sub></div>
 <br>
 Code was adjusted so that it integrates relay, LCD and assigning buttons values with numbers and letters. Removed or commented various sections of original code that was unnecessary after I found out my remote’s protocol.
 
-<br>
+<br><br>
 <p align="center"><img width="407" height="271" alt="image" src="https://github.com/user-attachments/assets/d4d0b6e5-6636-4797-a04d-b3dd1948f116" /><br><sub><i>Fig9:RGB Remote</i></sub></p>
 
 <br><br>
 <img width="1137" height="639" alt="image" src="https://github.com/user-attachments/assets/e85a53d6-4822-4038-9c3f-eef992fe7c7d" />
-<br><sub><i>Fig10:Remote Button Codes</i></sub>
+<p align="center"><sub><i>Fig10:Remote Button Codes</i></sub></p>
 
 <br><br>
-2 passwords declared in code one to turn relay on and other to turn off. Delay() of any value was causing timing issue hence leading to frozen response of lcd or ir. Baud rate of 115200 was utilized. Code only uploads when set back to 9600 for some reason and then turned back to 115200(I think it has something to do with CH340 chip). Millis() was used to debounce the buttons. LCD with I2C used to show the status of relay and password entered. Backlight pins connected with 220ohm resistor and also LCD was supplied with separate 5v to reduce current draw.LCD connected with separate source with gnd common for both ext src and Arduino as sda and sdl do require gnd for reference.A USB B plug was stripped and power and gnd wire connected to IR.
+2 passwords declared in code one to turn relay on and other to turn off. Delay() of any value was causing timing issue hence leading to frozen response of lcd or ir. Baud rate of 115200 was utilized. Code only uploads when set back to 9600 for some reason and then turned back to 115200(I think it has something to do with CH340 chip). Millis() was used to debounce the buttons. LCD with I2C used to show the status of relay and password entered. Backlight pins connected with 220ohm resistor and also LCD was supplied with separate 5v to reduce current draw.LCD connected with separate source with gnd common for both ext src and Arduino as sda and sdl do require gnd for reference.A USB A plug was stripped and power and gnd wire connected to IR.
 
-<br><br>
+<br>
 <table>
   <tr>
     <td><img width="484" height="537" alt="image" src="https://github.com/user-attachments/assets/af02a2fb-0a0d-416e-abf9-1060d8a96781" />
-    <br>  <div  align="center"><sub><i> Fig11 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig11 :5v USB A Plug</i></sub></div>
 </td>
     <td><img width="503" height="532" alt="image" src="https://github.com/user-attachments/assets/6fedf8c4-09fb-4063-ada5-4478a8048333" />
-    <br>  <div  align="center"><sub><i> Fig12 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig12 :5v USB A Plug</i></sub></div>
 </td>
   </tr>
 </table>
@@ -84,10 +83,10 @@ Current req: relay: 70-80mA per channel to energize the coil and 2-20mA to power
 <table>
   <tr>
     <td><img width="408" height="524" alt="image" src="https://github.com/user-attachments/assets/d18071ac-7596-4367-ba91-6f5cbf3032f2" />
-    <br>  <div  align="center"><sub><i> Fig15 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig15 :Turning ON</i></sub></div>
 </td>
     <td><img width="486" height="524" alt="image" src="https://github.com/user-attachments/assets/2d8cec62-f734-4027-ac7d-35c10ad7c8c9" />
-    <br>  <div  align="center"><sub><i> Fig16 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig16 :Bulb is ON</i></sub></div>
 </td>
   </tr>
 </table>
@@ -95,10 +94,10 @@ Current req: relay: 70-80mA per channel to energize the coil and 2-20mA to power
 <table>
   <tr>
     <td><img width="436" height="482" alt="image" src="https://github.com/user-attachments/assets/11b49db3-fb7a-4c11-9312-032ed971692e" />
-    <br>  <div  align="center"><sub><i> Fig17 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig17 :Turning OFF/i></sub></div>
 </td>
     <td><img width="314" height="484" alt="image" src="https://github.com/user-attachments/assets/960616f7-4c6e-49a0-8add-09f4bc18276a" />
-    <br>  <div  align="center"><sub><i> Fig18 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig18 :Bulb OFF</i></sub></div>
 </td>
   </tr>
 </table>
@@ -106,22 +105,19 @@ Current req: relay: 70-80mA per channel to energize the coil and 2-20mA to power
 <table>
   <tr>
     <td><img width="428" height="545" alt="image" src="https://github.com/user-attachments/assets/4a8e0c9b-ae96-4f0e-aa48-247b5f60e078" />
-    <br>  <div  align="center"><sub><i> Fig19 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig19 :Wrong Pass Used</i></sub></div>
 </td>
     <td><img width="422" height="551" alt="image" src="https://github.com/user-attachments/assets/80756c4e-f1ed-467a-874b-79aa3dae5e4d" />
-    <br>  <div  align="center"><sub><i> Fig20 :5v USB B Plug</i></sub></div>
+    <br>  <div  align="center"><sub><i> Fig20 :"RE-ENTER" Displayed</i></sub></div>
 </td>
   </tr>
 </table>
 
 WHAT I LEARNED: Serial.println(F("2")); use of F? F stores memory in Flash instead of using the 2kb SRAM (Save Dynamic Memory) in Arduino UNO and as the code prints a lot of static texts we use flash memory. Variables that change shouldn’t be placed in flash as they need to be in SRAM to be updated.
-
 <br><br>
 Flash memory is permanent memory stored in Arduino. It stores the code even when unplugged. Static Variables stored in flash using F() macro.
-
 <br><br>
 In SRAM: there is stack and heap in a single memory column. Stack stores function call names and local variables and grows downwards. Heap stores dynamically stored data and grows upward. When memory gets full (called ‘stack overflow’) they both collide into each other and try overwriting each other causing random Arduino reboots and garbage outputs.
-
 <br><br>
 Possible Updates: password using cloud/wifi; buzzer integration for audio feedback; circuit need to be made cleaner.
 
