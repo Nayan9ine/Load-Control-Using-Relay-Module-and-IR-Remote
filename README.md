@@ -112,7 +112,12 @@ Current req: relay: 70-80mA per channel to energize the coil and 2-20mA to power
 </td>
   </tr>
 </table>
-
+Kicad Document Images:<br>
+<img width="1920" height="1080" alt="Screenshot (1045)" src="https://github.com/user-attachments/assets/f31aab91-d490-4d7b-a237-f9b2ae7667f0" /><br>
+<img width="1920" height="1080" alt="Screenshot (1042)" src="https://github.com/user-attachments/assets/3e7615be-17b2-481d-a9ab-83c77049d5e4" /><br>
+<img width="1920" height="1080" alt="Screenshot (1044)" src="https://github.com/user-attachments/assets/c3f4e769-59ac-4daa-8c42-b0786b51d33f" /><br>
+<img width="1920" height="1080" alt="Screenshot (1043)" src="https://github.com/user-attachments/assets/db02544c-3273-42e2-bcac-23bafcb9e4a7" />
+<br>
 WHAT I LEARNED: Serial.println(F("2")); use of F? F stores memory in Flash instead of using the 2kb SRAM (Save Dynamic Memory) in Arduino UNO and as the code prints a lot of static texts we use flash memory. Variables that change shouldn’t be placed in flash as they need to be in SRAM to be updated.
 <br><br>
 Flash memory is permanent memory stored in Arduino. It stores the code even when unplugged. Static Variables stored in flash using F() macro.
