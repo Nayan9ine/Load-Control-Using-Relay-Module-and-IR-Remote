@@ -113,6 +113,7 @@ Current req: relay: 70-80mA per channel to energize the coil and 2-20mA to power
   </tr>
 </table>
 Kicad Document Images:<br>
+Relay module was extracted from (https://github.com/ampnics/Relay-Module-HW-Design).<br>
 <img width="1920" height="1080" alt="Screenshot (1045)" src="https://github.com/user-attachments/assets/f31aab91-d490-4d7b-a237-f9b2ae7667f0" /><br>
 <img width="1920" height="1080" alt="Screenshot (1042)" src="https://github.com/user-attachments/assets/3e7615be-17b2-481d-a9ab-83c77049d5e4" /><br>
 <img width="1920" height="1080" alt="Screenshot (1044)" src="https://github.com/user-attachments/assets/c3f4e769-59ac-4daa-8c42-b0786b51d33f" /><br>
