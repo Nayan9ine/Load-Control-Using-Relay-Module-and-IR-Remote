@@ -1,4 +1,6 @@
-# Load-Control-Using-Relay-Module-and-IR-Remote
+# Load-Control-Using-Relay-Module-and-IR-Remote 
+ 
+<p align="right">-By Nayan Ag</p>
 Created a load control system in which load connected to relay module is turned ON or OFF on entering a password with IR based remote.Built on arduin UNO R3 clone using CH340 chip.
 <br><br>
 Compo used: IR Receiver; Arduino UNO CH340; Relay Module; Remote with IR transmitter; LCD with I2C ;Load; Jumper cables and 5v cable.
