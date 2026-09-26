@@ -1,3 +1,5 @@
+This file includes what was learnt during PCB making process in KiCad.
+---
 MADE ARDUINO SHIELD FOR LOAD CONTROL which has relay module IR receiver and LCD display embedded on it with a pot to control brightness.<br><br>
 ->Learnt how to adjust arduino shield boundary layer to fit in components.<br><br>
 ->How to use VIAS,Net Labels, Power FLags<br><br>
