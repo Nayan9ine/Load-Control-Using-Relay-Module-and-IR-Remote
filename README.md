@@ -56,7 +56,7 @@ Used IRremote library by Shirriff, z3t0, ArminJo (https://github.com/Arduino-IRr
 <img width="1151" height="647" alt="image" src="https://github.com/user-attachments/assets/d9dc2a57-dcf4-4e3b-8da1-3b2cbe381aaf" />
 <div align="center"><sub><i> Fig8:NEC Protocol Used by Remote</i></sub></div>
 
-#### About Code
+#### About Code & Connection
 Code was adjusted so that it integrates relay, LCD and assigning buttons values with numbers and letters. Removed or commented various sections of original code that was unnecessary after I found out my remote’s protocol. 
 <br><br>
 
@@ -69,7 +69,7 @@ Code was adjusted so that it integrates relay, LCD and assigning buttons values 
 
 2 passwords declared in code one to turn relay on and other to turn off. Delay() of any value was causing timing issue hence leading to frozen response of lcd or ir. Baud rate of 115200 was utilized. Code only uploads when set back to 9600 for some reason and then turned back to 115200(I think it has something to do with CH340 chip). Millis() was used to debounce the buttons.
 <br>
-LCD with I2C used to show the status of relay and password entered. Backlight pins connected with 220ohm resistor and also LCD was supplied with separate 5v to reduce current draw.LCD connected with separate source with gnd common for both ext src and Arduino as sda and sdl do require gnd for reference.A USB A plug was stripped and power and gnd wire connected to IR.
+LCD with I2C used to show the status of relay and password entered. Backlight pins connected with 220ohm resistor and also LCD was supplied with separate 5v to reduce current draw.LCD connected with separate source with gnd common for both ext src and Arduino as sda and sdl do require gnd for reference.A USB A plug was stripped and power and gnd wire connected to IR. (Fig 11)
 <br>
 
 <table>
@@ -128,7 +128,7 @@ Relay: 70-80mA per channel to energize the coil and 2-20mA to power the IR led i
   </tr>
 </table>
 
-#### Kicad Document Images
+#### Kicad Design Images
 Relay module was extracted from (https://github.com/ampnics/Relay-Module-HW-Design).<br>
 <img width="1920" height="1080" alt="Screenshot (1045)" src="https://github.com/user-attachments/assets/f31aab91-d490-4d7b-a237-f9b2ae7667f0" /><br>
 <img width="1920" height="1080" alt="Screenshot (1042)" src="https://github.com/user-attachments/assets/3e7615be-17b2-481d-a9ab-83c77049d5e4" /><br>
@@ -136,12 +136,15 @@ Relay module was extracted from (https://github.com/ampnics/Relay-Module-HW-Desi
 <img width="1920" height="1080" alt="Screenshot (1043)" src="https://github.com/user-attachments/assets/db02544c-3273-42e2-bcac-23bafcb9e4a7" />
 
 #### Learning Outcomes
-Serial.println(F("2")); use of F? F stores memory in Flash instead of using the 2kb SRAM (Save Dynamic Memory) in Arduino UNO and as the code prints a lot of static texts we use flash memory. Variables that change shouldn’t be placed in flash as they need to be in SRAM to be updated.
-<br><br>
+Serial.println(F("2")); //used in code <br>
+Use of F: Stores memory in Flash instead of the temporary and small 2kb SRAM (Static Random Access Memory) in Arduino UNO. And as the code uses a lot of static texts (unchanging), we use flash memory. Variables that change shouldn’t be placed in flash as they need to be in SRAM to be updated.
+<br>
+
 Flash memory is permanent memory stored in Arduino. It stores the code even when unplugged. Static Variables stored in flash using F() macro.
 <br><br>
 In SRAM: there is stack and heap in a single memory column. Stack stores function call names and local variables and grows downwards. Heap stores dynamically stored data and grows upward. When memory gets full (called ‘stack overflow’) they both collide into each other and try overwriting each other causing random Arduino reboots and garbage outputs.
 <br>
 
-Possible Updates: password using cloud/wifi; buzzer integration for audio feedback; circuit need to be made cleaner.
+#### Possible Upgrades
+password using cloud/wifi; buzzer integration for audio feedback; circuit design and wiring need to be made cleaner.
 
