@@ -24,7 +24,7 @@ IR Receiver, Arduino UNO CH340, Relay Module, Remote with IR transmitter, LCD wi
 </table>
 
 #### IR Receiver Extraction
-IR receiver salvaged off from old dish tv setup box. Has 3 pins signal,gnd & power starting from left to right respectively (in fig 4). For desoldering I Used Chisel tip (greater surface area), ample amounts of flux and heat, tried removing old solder by desolder pump and copper wick also created a new solder bridge between the pins for effective heat distribution yet ultimately leading to a pin breaking. I soldered female to male type jumper cables to it (color coded) and used shrink tubes. 
+Salvaged off from old tv setup box. Has 3 pins signal,gnd & power starting from left to right respectively (in fig 4). For desoldering I Used Chisel tip (greater surface area), ample amounts of flux and heat, tried removing old solder by desolder pump and copper wick also created a new solder bridge between the pins for effective heat distribution yet ultimately leading to a pin breaking. I soldered female to male type jumper cables to it (color coded) and used shrink tubes. 
 <br>
 
 <table>
@@ -42,7 +42,7 @@ IR receiver salvaged off from old dish tv setup box. Has 3 pins signal,gnd & pow
 </table>
 
 #### Finding IR Polarity
-Since the setup box wasn’t working, I couldn’t directly measure using multimeter. So I found the component responsible for stepping down which is usually kept near for EMI reduction which is shown in the picture LD1117AG ADA TBTQ. It is a Low Dropout (LDO) linear positive voltage regulator manufactured by UTC (Unisonic Technologies). I compared the connection of IR and LDO with LDO and Barrel jack Input of the circuit. Ground was common to all and the one pin of IR not showing any continuity with LDO was the signal pin hence remains the power pin.
+The old setup box wasn’t working, so couldn't measure using multimeter. So I backtracked the copper traces and found the component responsible for stepping down the main DC voltage and is usually kept near for EMI reduction. Shown in Fig 3: LD1117AG ADA TBTQ. It is a Low Dropout (LDO) linear positive voltage regulator manufactured by UTC (Unisonic Technologies). The ADA stands for adjustable so it needs to be configured by external resistors to supply 3.3v. I compared the connection of IR and LDO with LDO and Barrel jack Input of the circuit. Checked the resistor config. Ground was common to all and the one pin of IR not showing any continuity with LDO was the signal pin hence remains the power pin.
 
 #### Using IR Library
 Used IRremote library by Shirriff, z3t0, ArminJo (https://github.com/Arduino-IRremote/Arduino-IRremote). The library can detect numerous protocols used for communication by IR. Standard rgb light control Remote was used that uses NEC protocol. The library helped identify signal protocol and command code for each button pressed.
