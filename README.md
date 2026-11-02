@@ -1,9 +1,14 @@
 # Load-Control-Using-Relay-Module-and-IR-Remote 
  
 <p align="right">-By Nayan Ag</p>
-Created a load control system in which load connected to relay module is turned ON or OFF on entering a password with IR based remote.Built on arduin UNO R3 clone using CH340 chip.
+
+### Work Flow in Brief
+<br>
+IR salvaged from setup box  -> IR Protocol and Hex codes of remote found  -> Assigned alphanumeric value and commands to buttons -> Arranged separate power supply for LCD -> Installed a Light Bulb as load -> Assembled everything to create a working model
 <br><br>
-Compo used: IR Receiver; Arduino UNO CH340; Relay Module; Remote with IR transmitter; LCD with I2C ;Load; Jumper cables and 5v cable.
+
+Components Used: IR Receiver, Arduino UNO CH340, Relay Module, Remote with IR transmitter, LCD with I2C, Light Bulb (as load), Jumper cables and 5V cable.
+<br>
 
 <table>
   <tr>
@@ -19,7 +24,7 @@ Compo used: IR Receiver; Arduino UNO CH340; Relay Module; Remote with IR transmi
   </tr>
 </table>
 
-IR receiver was salvaged off from old dish tv setup box . Has 3 pins with signal,gnd,power starting from left to right respectively. Required a lot of heat and flux to de-solder, ultimately leading to a pin breaking. I soldered jumper cables hastily to it and used shrink tubes. 
+IR receiver salvaged off from old dish tv setup box. Has 3 pins signal,gnd & power starting from left to right respectively (in fig 4). For desoldering I Used Chisel tip (greater surface area), ample amounts of flux and heat, tried removing old solder by desolder pump and copper wick also created a new solder bridge between the pins for effective heat distribution yet ultimately leading to a pin breaking. I soldered female to male type jumper cables to it (color coded) and used shrink tubes. 
 <br>
 
 <table>
