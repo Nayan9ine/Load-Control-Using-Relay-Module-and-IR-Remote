@@ -84,7 +84,7 @@ LCD with I2C used to show the status of relay and password entered. Backlight pi
 </table>
 
 #### Current Requirements
-Relay: 70-80mA per channel to energize the coil and 2-20mA to power the IR led in optocoupler, LCD backlight: 20-50mA, Arduino can provide : 400-450mA by USB ,500-800 by barrel jack (7v-12v).IR receiver 3.3v: 0.4-1.5ma on standby and 3-5mA at peak. During switching of relay rapid current burst occurs that causes fluctuation in LCD causing dim text appearance (due to voltage drop?). To counter that capacitor can be used to be placed in parallel and delayed activation of LCD relay status indicator or in my case I used a totally separate source. 
+Relay: 70-80mA per channel to energize the coil and 2-20mA to power the IR led in optocoupler, LCD backlight: 20-50mA, Arduino can provide : 400-450mA by USB ,500-800 by barrel jack (7v-12v).IR receiver 3.3v: 0.4-1.5ma on standby and 3-5mA at peak. During switching of relay rapid current burst occurs that causes fluctuation in LCD causing dim text appearance (due to voltage drop). To counter that capacitor can be used to be placed in parallel and delayed activation of LCD relay status indicator or in my case I used a totally separate source. 
 <br>
 
 <img width="939" height="473" alt="image" src="https://github.com/user-attachments/assets/cc49dec3-50eb-4cb6-98db-e3d9c6ec0849" />
